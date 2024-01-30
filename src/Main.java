@@ -15,7 +15,11 @@ public class Main {
         Employee[] employees = new Employee[10];
         for(int i = 0; i< employees.length;i++){
             Random random = new Random();
-            double randomSalary = random.nextDouble(10000, 40000);
+
+
+
+            double randomSalary = random.nextDouble(15000, 30000);
+
             double roundedSalary= Math.round(randomSalary*100.0)/100.0;
             employees[i] = new Employee("Name" + (i+1), 20+i, roundedSalary);
         }
