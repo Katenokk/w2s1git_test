@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Random;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -13,7 +14,10 @@ public class Main {
         //create 10 Employee objects:
         Employee[] employees = new Employee[10];
         for(int i = 0; i< employees.length;i++){
-            employees[i] = new Employee("Name" + (i+1), 20+i, 10000+i);
+            Random random = new Random();
+            double randomSalary = random.nextDouble(15000, 30000);
+            double roundedSalary= Math.round(randomSalary*100.0)/100.0;
+            employees[i] = new Employee("Name" + (i+1), 20+i, roundedSalary);
         }
 
         try {
