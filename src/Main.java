@@ -5,10 +5,7 @@ import java.io.IOException;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Employee pepe = new Employee("pepe", "pepe@gmail.com", 20, 30000);
-        System.out.println(pepe.getName());
-        Intern pepito = new Intern("pepito", "pepito@gmail.com", 21, 10000);
-        System.out.println(pepito.getSalary());
+
         createEmployees();//TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
     }
@@ -16,7 +13,7 @@ public class Main {
         //create 10 Employee objects:
         Employee[] employees = new Employee[10];
         for(int i = 0; i< employees.length;i++){
-            employees[i] = new Employee("Name" + (i+1), (i+1) + "@email.com", 20+i, 10000+i);
+            employees[i] = new Employee("Name" + (i+1), 20+i, 10000+i);
         }
 
         try {

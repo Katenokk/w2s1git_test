@@ -4,9 +4,9 @@ public class Employee {
     private int age;
     private double salary;
 
-    public Employee(String name, String email, int age, double salary){
+    public Employee(String name,  int age, double salary){
         setName(name);
-        setEmail(email);
+        setEmail();
         setAge(age);
         setSalary(salary);
     }
@@ -15,8 +15,8 @@ public class Employee {
         this.name = name;
     }
 
-    public void setEmail(String email){
-        this.email = email;
+    public void setEmail(){
+        this.email = this.name.toLowerCase() + "@company.com";
     }
 
     public void setAge(int age){
